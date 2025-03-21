@@ -1,6 +1,7 @@
 
 import { Container } from './components/Container'
 import { InputField } from './components/InputField'
+import { SubmitButton } from './components/SubmitButton'
 import './App.css'
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
           <InputField label="Query Type" type="radio" name="query" value='general' labelText='General enquiry' required/>
           <InputField label="" type="radio" name="query" value='support' labelText='Support request'/>
           <InputField label="Message" type="textarea" name="message" placeholder='Great power....' required/>
-
+          <InputField label="" type="checkbox" name="checkbox" labelText='I consent to being contacted by the team' required/>
+          <SubmitButton />
       </Container>
     </main>
   )
