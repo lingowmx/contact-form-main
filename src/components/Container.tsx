@@ -5,7 +5,7 @@ interface Containerprops{
 
 export const Container = ({children}: Containerprops) => {
   return (
-    <section className="bg-white w-80 rounded-xl flex flex-col justify-center items-center">
+    <section className="bg-white w-80 rounded-xl flex flex-col justify-center items-center p-2">
       {children}
     </section>
   )

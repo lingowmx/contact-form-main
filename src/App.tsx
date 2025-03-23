@@ -13,8 +13,7 @@ function App() {
           <InputField label="First Name" type="text" name="Fname" placeholder="Peter" required/>
           <InputField label="Last Name" type="text" name="Lname" placeholder="Parker" required />
           <InputField label="Email Address" type="email" name="email" placeholder="spider@man.com" required/>
-          <InputField label="Query Type" type="radio" name="query" value='general' labelText='General enquiry' required/>
-          <InputField label="" type="radio" name="query" value='support' labelText='Support request'/>
+          <InputField label="Query Type" type="radio" name="query" required/>
           <InputField label="Message" type="textarea" name="message" placeholder='Great power....' required/>
           <InputField label="" type="checkbox" name="checkbox" labelText='I consent to being contacted by the team' required/>
           <SubmitButton />
