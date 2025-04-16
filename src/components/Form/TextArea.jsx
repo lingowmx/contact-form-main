@@ -13,14 +13,14 @@ export const TextArea = ({
   return (
     <section className="flex">
       <div className="w-full flex flex-col justify-between">
-        <div className="flex gap-1">
+        <div className="flex gap-1 mt-4">
           <label
             htmlFor={name}
             className="text-sm">{label}</label>
           <span>*</span>
         </div>
         <textarea
-          className={`w-72 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500`}
+          className={`w-72 h-32 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500 resize-none`}
           id={name}
           type={type}
           placeholder={placeholder}

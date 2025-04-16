@@ -10,7 +10,7 @@ export const InputField = ({
   const { register, formState: { errors } } = useFormContext()
 
   return (
-    <section className="flex">
+    <section className="flex mb-4">
       <div className="w-full flex flex-col justify-between">
         <div className="flex gap-1">
           <label 

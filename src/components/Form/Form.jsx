@@ -4,6 +4,7 @@ import { TextArea } from "./TextArea";
 import { SubmitButton } from "./SubmitButton";
 import { RadioSelection } from "./RadioSelection";
 import { CheckBox } from "./CheckBox";
+import { Title } from "../Title";
 
 export const Form = () => {
   const methods = useForm();
@@ -14,7 +15,8 @@ export const Form = () => {
     <FormProvider {...methods}>
       <form
         onSubmit={methods.handleSubmit(onSubmit)}
-        className="w-80 flex flex-col justify-center items-center">
+        className="w-80 flex flex-col justify-center items-center rounded-md">
+        <Title/>
         <InputField
           name="FirstName"
           label="First name"
