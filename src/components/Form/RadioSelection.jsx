@@ -4,7 +4,8 @@ export const RadioSelection = ({
   name,
   label,
   options = [],
-  validation = {}
+  validation = {},
+
 }) => {
 
   const { register, formState: { errors }, watch } = useFormContext()
