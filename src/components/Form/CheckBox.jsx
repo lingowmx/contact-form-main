@@ -1,4 +1,5 @@
 import { useFormContext } from "react-hook-form"
+import checkIcon from '../../../assets/images/icon-checkbox-check.svg'
 
 export const CheckBox = ({
   name,
@@ -6,25 +7,28 @@ export const CheckBox = ({
   validation = {},
 
 }) => {
-  const { register, formState: { errors } } = useFormContext()
+  const { register, watch, formState: { errors } } = useFormContext()
+  const isChecked = watch(name)
   return (
     <section className="mt-2 w-72">
       <div className="w-72 mt-1 flex justify-between gap-3 cursor-pointer">
-        <input
-          type="checkbox"
-          id={name}
-          className="peer sr-only"
-          {...register(name, validation)}
-
-        />
-        <span className="w-4 h-4 border rounded flex items-center justify-center 
-                   peer-checked:bg-green-500 transition-colors">✔
-          {/* <span className="text-black text-xs hidden peer-checked:block peer-checked:bg-green-300">✔</span> */}
-        </span>
         <label
           htmlFor={name}
-          className="cursor-pointer">
-        {label}
+          className="cursor-pointer flex justify-between gap-3 items-center">
+          <div className="w-5 h-4 border border-gray-300">
+            {isChecked && (
+              <img src={checkIcon} alt="checkIcon" />
+            )}
+          </div>
+          <input
+            type="checkbox"
+            id={name}
+            className="peer sr-only"
+            {...register(name, validation)}
+
+          />
+
+          {label}
         </label>
 
       </div>

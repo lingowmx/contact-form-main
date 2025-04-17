@@ -9,14 +9,16 @@ import { Success } from "../Success";
 
 export const Form = () => {
   const methods = useForm();
-  const { handleSubmit, formState: { isSubmitSuccessful } } = methods
+  const { handleSubmit, reset, formState: { isSubmitSuccessful } } = methods
   const onSubmit = (data) => {
     (data)
   };
 
   return (
     <FormProvider {...methods}>
-      <Success isSubmitSuccessful={isSubmitSuccessful} />
+      <Success 
+        isSubmitSuccessful={isSubmitSuccessful}
+        onReset = {() => reset()}/>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className={`${isSubmitSuccessful ? "w-80 flex flex-col justify-center items-center rounded-md opacity-45" : "w-80 flex flex-col justify-center items-center rounded-md"}`}>
