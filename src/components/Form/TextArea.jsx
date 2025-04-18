@@ -11,7 +11,8 @@ export const TextArea = ({
  
 }) => {
   const { register, formState: { errors } } = useFormContext()
-  const textAreaClasses = `w-72 h-32 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500 resize-none`
+  const textAreaClasses = `w-72 h-32 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500 resize-none
+  sm:w-[584px]`
   return (
     <section className="flex">
       <div className="w-full flex flex-col justify-between">

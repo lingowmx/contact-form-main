@@ -5,10 +5,12 @@ export const InputField = ({
   label,
   type = 'text',
   placeholder,
-  validation = {}
+  validation = {},
+  fullWidth = false
 }) => {
   const { register, formState: { errors } } = useFormContext()
-  const inputClasses = `w-72 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500`
+  const inputClasses = `w-72 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500 
+  ${fullWidth ? "w-full" : ""}`
 
   return (
     <section className="flex mb-4">

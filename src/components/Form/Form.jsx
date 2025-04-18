@@ -16,43 +16,48 @@ export const Form = () => {
 
   return (
     <FormProvider {...methods}>
-      <Success 
+      <Success
         isSubmitSuccessful={isSubmitSuccessful}
-        onReset = {() => reset()}/>
+        onReset={() => reset()} />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className={`${isSubmitSuccessful ? "w-80 flex flex-col justify-center items-center rounded-md opacity-45" : "w-80 flex flex-col justify-center items-center rounded-md"}`}>
+        className={`${isSubmitSuccessful ? "w-80 flex flex-col justify-center items-center rounded-md opacity-45" : "w-80 flex flex-col justify-center items-center rounded-md"}
+        sm:w-full`}>
         <fieldset disabled={isSubmitSuccessful} className="contents">
 
 
           <Title />
-          <InputField
-            name="FirstName"
-            label="First name"
-            placeholder="Donald"
-            validation={{ required: "This field is required" }}
-
-          />
-          <InputField
-            name="LastName"
-            label="Last name"
-            placeholder="McBurguer"
-            validation={{ required: "This field is required" }}
-
-          />
-          <InputField
-            name="Email"
-            label="Email address"
-            placeholder="dmcburguer@yummy.com"
-            validation={{
-              required: "This field is required",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Invalid email address"
-              }
-            }}
-
-          />
+          <div className="sm:flex sm:gap-2">
+            <InputField
+              name="FirstName"
+              label="First name"
+              placeholder="Donald"
+              validation={{ required: "This field is required" }}
+            />
+            <InputField
+              name="LastName"
+              label="Last name"
+              placeholder="McBurguer"
+              validation={{ required: "This field is required" }}
+            />
+          </div>
+          <div className="sm:flex sm:w-[584px]">
+            <div className="sm:w-full">
+              <InputField
+                name="Email"
+                label="Email address"
+                placeholder="dmcburguer@yummy.com"
+                validation={{
+                  required: "This field is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address"
+                  }
+                }}
+                fullWidth={true}
+              />
+            </div>
+          </div>
           <RadioSelection
             name="QueryType"
             label="Query type"

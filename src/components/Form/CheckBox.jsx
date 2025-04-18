@@ -10,8 +10,8 @@ export const CheckBox = ({
   const { register, watch, formState: { errors } } = useFormContext()
   const isChecked = watch(name)
   return (
-    <section className="mt-2 w-72">
-      <div className="w-72 mt-1 flex justify-between gap-3 cursor-pointer">
+    <section className="mt-2 w-72 sm:w-[584px]">
+      <div className="w-72 mt-1 flex justify-between gap-3 cursor-pointer sm:w-full">
         <label
           htmlFor={name}
           className="cursor-pointer flex justify-between gap-3 items-center">

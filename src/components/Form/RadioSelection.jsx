@@ -16,7 +16,7 @@ export const RadioSelection = ({
         <label>{label}</label>
         <span>*</span>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 sm:flex sm:flex-row">
         {options.map((option) => (
           <div key={option.value} className="relative">
             <input
