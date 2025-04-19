@@ -31,21 +31,25 @@ export const Form = () => {
 
 
           <Title />
-          <div className="sm:flex sm:gap-2">
-            <InputField
-              name="FirstName"
-              label="First name"
-              placeholder="Donald"
-              validation={{ required: "This field is required" }}
-            />
-            <InputField
-              name="LastName"
-              label="Last name"
-              placeholder="McBurguer"
-              validation={{ required: "This field is required" }}
-            />
+          <div className="sm:flex sm:gap-2 sm:items-start">
+            <div className="sm:w-1/2">
+              <InputField
+                name="FirstName"
+                label="First name"
+                placeholder="Donald"
+                validation={{ required: "This field is required" }}
+              />
+            </div>
+            <div className="sm:w-1/2">
+              <InputField
+                name="LastName"
+                label="Last name"
+                placeholder="McBurguer"
+                validation={{ required: "This field is required" }}
+              />
+            </div>
           </div>
-          <div className="sm:flex sm:w-[584px]">
+          <div className="w-72 sm:flex sm:w-[584px]">
             <div className="sm:w-full">
               <InputField
                 name="Email"
