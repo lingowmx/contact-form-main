@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme{
+  --color-green-medium: oklch(53.53% 0.174 179.20);
+  --color-red-error:  hsl(0, 66%, 54%);
+  --color-gray-border: hsl(186, 15%, 59%);
+  --color-gray-text: hsl(187, 24%, 22%)
+}
+
 body{
-  background-color: rgb(137, 188, 137);
+  background-color: hsl(148, 38%, 91%);
 }

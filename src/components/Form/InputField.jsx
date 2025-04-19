@@ -9,11 +9,11 @@ export const InputField = ({
   fullWidth = false
 }) => {
   const { register, formState: { errors } } = useFormContext()
-  const inputClasses = `w-72 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500 
+  const inputClasses = `w-72 border ${errors[name] ? 'border-red-500' : 'border-gray-border'} rounded p-2 focus:outline-green-500 
   ${fullWidth ? "w-full" : ""}`
 
   return (
-    <section className="flex mb-4">
+    <section className="flex mb-4 text-gray-text">
       <div className="w-full flex flex-col justify-between">
         <div className="flex gap-1">
           <label 
@@ -29,7 +29,7 @@ export const InputField = ({
           {...register(name, validation)}
         />
         {errors[name] && (
-          <p className="text-xs text-red-500">
+          <p className="text-xs text-red-error">
             {errors[name].message}
           </p>
         )}

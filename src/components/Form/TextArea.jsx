@@ -11,10 +11,10 @@ export const TextArea = ({
  
 }) => {
   const { register, formState: { errors } } = useFormContext()
-  const textAreaClasses = `w-72 h-32 border ${errors[name] ? 'border-red-500' : 'border-gray-300'} rounded p-2 focus:outline-green-500 resize-none
+  const textAreaClasses = `w-72 h-32 border ${errors[name] ? 'border-red-500' : 'border-gray-border'} rounded p-2 focus:outline-green-500 resize-none
   sm:w-[584px]`
   return (
-    <section className="flex">
+    <section className="flex text-gray-text">
       <div className="w-full flex flex-col justify-between">
         <div className="flex gap-1 mt-4">
           <label

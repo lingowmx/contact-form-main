@@ -28,13 +28,13 @@ export const RadioSelection = ({
             />
             <label
               htmlFor={option.value}
-              className="w-72 h-10 flex pl-4 items-center border border-gray-300 rounded-md gap-1 
+              className="w-72 h-10 flex pl-4 items-center border border-gray-border text-gray-text rounded-md gap-1 
                        peer-checked:bg-green-500/10  peer-checked:border-green-500
                        transition-colors duration-200 cursor-pointer">
               <span className="w-4 h-4 rounded-full border-2 border-gray-300 
                             peer-checked:border-white peer-checked:bg-white
                             flex items-center justify-center">
-                <span className={`w-2 h-2 rounded-full inline-block transition-colors duration-200 
+                <span className={`w-2 h-2 rounded-full inline-block transition-colors duration-200 text-gray-text
                      ${selectedValue === option.value ? "bg-green-600" : "bg-transparent"}`}></span>
               </span>
               {option.value}
