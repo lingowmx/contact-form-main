@@ -7,6 +7,7 @@ import { CheckBox } from "./CheckBox";
 import { Title } from "../Title";
 import { Success } from "../Success";
 
+
 export const Form = () => {
   const methods = useForm();
   const { handleSubmit, reset, formState: { isSubmitSuccessful } } = methods
@@ -14,11 +15,14 @@ export const Form = () => {
     (data)
   };
 
+
   return (
     <FormProvider {...methods}>
       <Success
         isSubmitSuccessful={isSubmitSuccessful}
-        onReset={() => reset()} />
+        onReset={() => reset()}
+
+      />
       <form
         onSubmit={handleSubmit(onSubmit)}
         className={`${isSubmitSuccessful ? "w-80 flex flex-col justify-center items-center rounded-md opacity-45" : "w-80 flex flex-col justify-center items-center rounded-md"}
@@ -83,7 +87,6 @@ export const Form = () => {
           />
 
           <SubmitButton
-
           />
         </fieldset>
       </form>

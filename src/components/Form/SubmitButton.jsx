@@ -6,6 +6,7 @@ export const SubmitButton = () => {
                  hover:bg-green-medium hover:scale-105 hover:text-white 
                  sm:w-[584px]"
       type="submit"
+    
     >
       Submit
     </button>
